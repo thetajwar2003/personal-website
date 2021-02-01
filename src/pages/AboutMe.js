@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { Grid, Header, Icon, Image } from 'semantic-ui-react'
 
 import taj from './images/tajpic.jpg';
