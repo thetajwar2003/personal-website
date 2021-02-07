@@ -7,7 +7,7 @@ import Home from './Home'
 function App() {
   return (
     <Router>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/personal-website' component={Home} />
     </Router>
   );
 }
