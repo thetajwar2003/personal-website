@@ -1,7 +1,19 @@
-import React from 'react'
-import { Container, Item, Label, Header, Divider, Grid, Button } from 'semantic-ui-react'
+/* eslint-disable array-callback-return */
+import React, { useState } from 'react'
+import { Container, Item, Label, Header, Divider, Grid, Button, Modal, Image } from 'semantic-ui-react'
+
+import detailsOn from '../constants/projectDetails';
 
 export default function Project() {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedProject, setSelectedProject] = useState({
+        Name: "",
+        Date: "",
+        Meta: "",
+        Desc: "",
+        Tags: [],
+    });
+    const proj = new detailsOn();
     return (
         <Grid style={{ padding: "1% 0% 1% 0%", margin: "0%", width: "100%" }}>
             <Container >
@@ -9,30 +21,35 @@ export default function Project() {
                     Projects
                 <Divider />
                 </Header>
-                {/* MAKE TWO COLUMNS FOR SPACE */}
                 <Grid centered columns={2} style={{ padding: "0% 5% 0% 5%", margin: "0%", width: "100%" }} verticalAlign="middle">
                     <Grid.Row>
                         <Grid.Column >
                             <Item.Group >
-                                <Item>
+                                <Item >
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header >postr</Item.Header>
-                                        <Item.Meta> 01/15/2021 </Item.Meta>
+                                        <Item.Header >{proj.postr().Name}</Item.Header>
+                                        <Item.Meta> {proj.postr().Date} </Item.Meta>
                                         <Item.Description>
-                                            A social media website like twitter to post your thoughts. You can like and comment on anyone's
-                                            post.
+                                            {proj.postr().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.postr);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>MERN Stack</Label>
-                                            <Label>GraphQL</Label>
-                                            <Label>SemanticUI</Label>
+                                            {proj.postr().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -44,23 +61,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>Instagram Clone</Item.Header>
-                                        <Item.Meta> 12/28/2020 </Item.Meta>
+                                        <Item.Header >{proj.insta().Name}</Item.Header>
+                                        <Item.Meta> {proj.insta().Date} </Item.Meta>
                                         <Item.Description>
-                                            A cross platform clone of Instagram. You can post/take pictures, write comments, and add friends.
-                                            It's a barebone project with currently no styling. I plan to implement aesthetic styles to the
-                                            app in the future.
+                                            {proj.insta().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.insta);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>React Native</Label>
-                                            <Label>Redux</Label>
-                                            <Label>Firebase</Label>
+                                            {proj.insta().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -73,22 +95,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>Clever Cart</Item.Header>
-                                        <Item.Meta> 01/11/2021 </Item.Meta>
+                                        <Item.Header >{proj.cleverCart().Name}</Item.Header>
+                                        <Item.Meta> {proj.cleverCart().Date} </Item.Meta>
                                         <Item.Description>
-                                            An iOS shopping app where customers can add/remove items from their carts. They can proceed to
-                                            checkout which only empties the cart. Admins can add new items, increase the quantity of an
-                                            existing item, or remove an item entirely.
+                                            {proj.cleverCart().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.cleverCart);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>Swift</Label>
-                                            <Label>RestAPI</Label>
+                                            {proj.cleverCart().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -99,21 +127,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>AI Flappy Bird</Item.Header>
-                                        <Item.Meta> 06/09/2020 </Item.Meta>
+                                        <Item.Header >{proj.flappyBird().Name}</Item.Header>
+                                        <Item.Meta> {proj.flappyBird().Date} </Item.Meta>
                                         <Item.Description>
-                                            An AI that learns and teaches itself the popular game Flappy Bird.
+                                            {proj.flappyBird().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.flappyBird);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>Python</Label>
-                                            <Label>Pygame</Label>
-                                            <Label>NEAT-python</Label>
+                                            {proj.flappyBird().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -126,22 +161,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header >postr</Item.Header>
-                                        <Item.Meta> 01/15/2021 </Item.Meta>
+                                        <Item.Header >{proj.atm().Name}</Item.Header>
+                                        <Item.Meta> {proj.atm().Date} </Item.Meta>
                                         <Item.Description>
-                                            A social media website like twitter to post your thoughts. You can like and comment on anyone's
-                                            post.
+                                            {proj.atm().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.atm);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>MERN Stack</Label>
-                                            <Label>GraphQL</Label>
-                                            <Label>SemanticUI</Label>
+                                            {proj.atm().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -153,23 +194,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>Instagram Clone</Item.Header>
-                                        <Item.Meta> 12/28/2020 </Item.Meta>
+                                        <Item.Header >{proj.neuralNets().Name}</Item.Header>
+                                        <Item.Meta> {proj.neuralNets().Date} </Item.Meta>
                                         <Item.Description>
-                                            A cross platform clone of Instagram. You can post/take pictures, write comments, and add friends.
-                                            It's a barebone project with currently no styling. I plan to implement aesthetic styles to the
-                                            app in the future.
+                                            {proj.neuralNets().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.neuralNets);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>React Native</Label>
-                                            <Label>Redux</Label>
-                                            <Label>Firebase</Label>
+                                            {proj.neuralNets().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -182,21 +228,28 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>Behavr</Item.Header>
-                                        <Item.Meta> 07/19/20 </Item.Meta>
+                                        <Item.Header >{proj.googleAssistant().Name}</Item.Header>
+                                        <Item.Meta> {proj.googleAssistant().Date} </Item.Meta>
                                         <Item.Description>
-                                            A cross platform app that asks a user q myriad of questions and collects data on their writing style.
+                                            {proj.googleAssistant().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.googleAssistant);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            <Label>React Native</Label>
-                                            <Label>Machine Learning</Label>
-                                            <Label>Firebase</Label>
+                                            {proj.googleAssistant().Tags.map(function (tag, index) {
+                                                if (index < 3) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                }
+                                            })}
                                         </Item.Extra>
                                     </Item.Content>
                                 </Item>
@@ -207,22 +260,20 @@ export default function Project() {
                                 <Item>
                                     <Item.Image src='https://picsum.photos/200/' />
                                     <Item.Content>
-                                        <Item.Header>Slingshot Website</Item.Header>
-                                        <Item.Meta> 10/19/2020 </Item.Meta>
+                                        <Item.Header >{proj.otherProjects().Name}</Item.Header>
+                                        <Item.Meta> Various Dates </Item.Meta>
                                         <Item.Description>
-                                            Worked on the automation portal for Slingshot's website
+                                            {proj.otherProjects().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
+                                            }} onClick={() => {
+                                                setShowModal(true);
+                                                setSelectedProject(proj.otherProjects);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
-                                        <Item.Extra>
-                                            <Label>Typescript</Label>
-                                            <Label>SemanticUI</Label>
-                                            <Label>Google APIs</Label>
-                                        </Item.Extra>
                                     </Item.Content>
                                 </Item>
                             </Item.Group>
@@ -230,6 +281,66 @@ export default function Project() {
                     </Grid.Row>
                 </Grid>
             </Container>
+            <Modal
+                dimmer={'blurring'}
+                closeOnDimmerClick={false}
+                closeIcon={{ style: { top: '1.0535rem', right: '1rem' }, color: 'black', name: 'close' }}
+                open={showModal}
+                onClose={() => setShowModal(false)}
+                onOpen={() => setShowModal(true)}
+                centered style={{
+                    width: "75%",
+                }}
+                size="small"
+            >
+                <Header as="h1">
+                    {selectedProject.Name}
+                </Header>
+                {selectedProject.Name === "Practical Projects" ? (
+
+                    <Modal.Content >
+                        <Item.Group>
+                            {selectedProject.Projects.map(function (project, index) {
+                                return (
+                                    <Item>
+                                        <Image size="tiny" src='https://picsum.photos/100/' wrapped style={{ padding: "0%", margin: "0%" }} />
+                                        <Item.Content>
+                                            <Header as="h3">
+                                                {project.Name}
+                                                <Header.Subheader>{project.Date}</Header.Subheader>
+                                            </Header>
+                                            <Item.Description>{project.Meta}</Item.Description>
+                                            <Item.Extra>
+                                                {project.Tags.map(function (tag, index) {
+                                                    return (
+                                                        <Label>{tag}</Label>
+                                                    )
+                                                })}
+                                            </Item.Extra>
+                                        </Item.Content>
+                                    </Item>
+                                )
+                            })}
+                        </Item.Group>
+                    </Modal.Content>
+                ) : (
+                    <Modal.Content image>
+                    <Image size="medium" src='https://picsum.photos/200/300' wrapped style={{ padding: "0%", margin: "0%" }} />
+                    <Container>
+                        <Header>Full Description:</Header>
+                        {selectedProject.Desc}
+                        <Divider hidden/>
+                        <Item.Extra>
+                            {selectedProject.Tags.map(function (tag, index) {
+                                return (
+                                    <Label>{tag}</Label>
+                                )
+                            })}
+                        </Item.Extra>
+                    </Container>
+                </Modal.Content>
+                )}
+            </Modal>
         </Grid>
     )
 }
