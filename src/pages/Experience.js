@@ -49,7 +49,7 @@ export default function Experience() {
                         <Grid.Column centered>
                             <Header as="h3" textAlign="center">
                                 iOS Developer Intern
-                            <Header.Subheader>Internship | December 2020 - Present</Header.Subheader>
+                            <Header.Subheader><b>Internship</b> | December 2020 - Present</Header.Subheader>
                             </Header>
                         - Improving <b>hotel housekeeping payment management system</b> using SwiftUI. <br />
                         - Designed <b>user experience frameworks</b> applicable to multiple screen sizes, including both iPad and iPhone. <br />
@@ -89,7 +89,7 @@ export default function Experience() {
                             <Grid.Row>
                                 <Header as="h3" textAlign="center">
                                     Software Engineer
-                            <Header.Subheader>Part-time | October 2020 - Present</Header.Subheader>
+                            <Header.Subheader><b>Part-time</b> | October 2020 - Present</Header.Subheader>
                                 </Header>
                         - Developed <b>automation portal</b> using <b>React.js and React.tsx.</b><br />
                         - Integrated <b>Firebase cloud functions</b> using <b>Google Drive and Gmail APIs.</b><br />
@@ -101,7 +101,7 @@ export default function Experience() {
                             <Grid.Row>
                                 <Header as="h3" textAlign="center">
                                     Software Developer/Machine Learning Intern
-                            <Header.Subheader>Internship | July 2020 - October 2020</Header.Subheader>
+                            <Header.Subheader><b>Internship</b> | July 2020 - October 2020</Header.Subheader>
                                 </Header>
                                 - Worked to <b>increase personal device security</b> by providing continuous than one-time authentication to the user.<br />
                                 - Achieved <b>97% accuracy</b> on novel <b>ML text classifying models</b> created to uniquely identify users based on their <b>stylometric features.</b><br />

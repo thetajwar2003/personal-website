@@ -303,7 +303,7 @@ export default function Project() {
                             {selectedProject.Projects.map(function (project, index) {
                                 return (
                                     <Item>
-                                        <Image size="tiny" src='https://picsum.photos/100/' wrapped style={{ padding: "0%", margin: "0%" }} />
+                                        <Image size="tiny" src={project.Image} wrapped style={{ padding: "0%", margin: "0%" }} />
                                         <Item.Content>
                                             <Header as="h3">
                                                 {project.Name}
