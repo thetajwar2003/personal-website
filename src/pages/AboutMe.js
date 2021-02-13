@@ -17,21 +17,21 @@ export default function AboutMe() {
 
                     <Grid.Row>
                         <Grid.Column width={4}>
-                            <Image src={taj} verticalAlign='middle'/>
+                            <Image src={taj} verticalAlign='middle' />
                         </Grid.Column>
                         <Grid.Column width={12}>
                             <Header as="h2">Hey, I'm Tajwar!</Header>
                             <p>
-                                I'm a senior at Bronx Science who loves combining programming and math to create creative 
-                                real-world applications. I'm attentive to detail, task-oriented and eager to contribute to team 
-                                I thrive in environments that allow me to develop my skills on a continuous basis. I'm dedicated 
-                                to growing as a developer and as an individual. 
+                                I'm a senior at Bronx Science who loves combining programming and math to create creative
+                                real-world applications. I'm attentive to detail, task-oriented and eager to contribute to team
+                                I thrive in environments that allow me to develop my skills on a continuous basis. I'm dedicated
+                                to growing as a developer and as an individual.
                             </p>
                             <p>
                                 During my free time I love to either visit the park and play basketball or help cook delicious
                                 meals. I'm also constantly trying to improve the Machine Learning Club in my school by creating
-                                lesson plans and bringing in guest speakers. Prior to the pademic I would often volunteer in an
-                                events that the Key Club provided every weekend.  
+                                lesson plans and bringing in guest speakers. Prior to the pademic I would often volunteer in any
+                                events that the Key Club provided every weekend.
                             </p>
                             <p>
                                 You can reach out to me through email or just message me on Linkedin!
@@ -50,7 +50,7 @@ export default function AboutMe() {
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid.Column>
-                        
+
                     </Grid.Row>
                 </Grid>
             </Container>

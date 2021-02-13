@@ -30,8 +30,8 @@ export default function Experience() {
                                     <Card.Header>HKP Solutions</Card.Header>
                                     <Card.Meta>3 months</Card.Meta>
                                     <Card.Description>
-                                        Housekeeping Payment Solutions LLC a mobile app development company, focused on developing scalable solutions for hotel chains to increase labor efficiency, 
-                                        improve employee satisfaction, and enhance the customer experience. 
+                                        Housekeeping Payment Solutions LLC a mobile app development company, focused on developing scalable solutions for hotel chains to increase labor efficiency,
+                                        improve employee satisfaction, and enhance the customer experience.
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra>
@@ -68,17 +68,17 @@ export default function Experience() {
                                     <Card.Header>Slingshot Mentoring</Card.Header>
                                     <Card.Meta>3 months</Card.Meta>
                                     <CardDescription>
-                                        Slingshot Mentoring is a global startup incubator that provides a free mentored internship program, and is focused on providing high school students to 
+                                        Slingshot Mentoring is a global startup incubator that provides a free mentored internship program, and is focused on providing high school students to
                                         industry-level internship, access to valuable college prep resources, and a lifelong network with mentors who graduated from the world's most prestigious
-                                        CS universities. 
+                                        CS universities.
                                     </CardDescription>
                                 </Card.Content>
                                 <Card.Content extra>
-                                    <Button style={{background:"#2d8c8c", color:"white"}} as="a" href="https://www.linkedin.com/company/slingshot-mentoring/" target="_blank">
+                                    <Button style={{ background: "#2d8c8c", color: "white" }} as="a" href="https://www.linkedin.com/company/slingshot-mentoring/" target="_blank">
                                         <Icon name="linkedin" />
                                         Linkedin
                                     </Button>
-                                    <Button style={{background:"#e6825a", color:"white"}} as="a" href="https://slingshotmentoring.com/" target="_blank">
+                                    <Button style={{ background: "#e6825a", color: "white" }} as="a" href="https://slingshotmentoring.com/" target="_blank">
                                         <Icon name="world" />
                                         Website
                                     </Button>
@@ -97,7 +97,7 @@ export default function Experience() {
                         - <b>Revised, modularized, and updated</b> old code bases to modern development standards.<br />
                         - Designed <b>intuitive graphical user interfaces</b> using knowledge of <b>serial communications and database design</b> to <b>improve user experience.</b><br />
                             </Grid.Row>
-                            <Divider />
+                            <Divider hidden />
                             <Grid.Row>
                                 <Header as="h3" textAlign="center">
                                     Software Developer/Machine Learning Intern

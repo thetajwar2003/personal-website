@@ -15,21 +15,21 @@ export default function Skills() {
                         <Item.Group>
                             <Item>
                                 <FaPython size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">Python</Header>
                                     <Item.Description>Machine Learning, Data Science, Regression, Classification, Clustering</Item.Description>
                                 </Item.Content>
                             </Item>
                             <Item>
                                 <FaJava size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">Java</Header>
                                     <Item.Description>Object-Oriented, JDBC, Lambdas, Data Structures, Algorithms</Item.Description>
                                 </Item.Content>
                             </Item>
                             <Item>
                                 <FaReact size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">React</Header>
                                     <Item.Description>JavaScript, TypeScript, Node.js, Full Stack</Item.Description>
                                 </Item.Content>
@@ -40,21 +40,21 @@ export default function Skills() {
                         <Item.Group>
                             <Item>
                                 <FaSwift size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">SwiftUI</Header>
                                     <Item.Description>APIs, CreateML, CoreData, UI/UX Design</Item.Description>
                                 </Item.Content>
                             </Item>
                             <Item>
                                 <FaDatabase size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">Databases</Header>
                                     <Item.Description>MySQL, SQLite, PostgreSQL, Firebase, MongoDB</Item.Description>
                                 </Item.Content>
                             </Item>
                             <Item>
                                 <FaCogs size={70} />
-                                <Item.Content style={{ padding: "0% 0% 0% 5%"}}>
+                                <Item.Content style={{ padding: "0% 0% 0% 5%" }}>
                                     <Header as="h2">Other Software/Frameworks </Header>
                                     <Item.Description>C#/C++, GoLang, Kotlin, Git, .NET, Heroku</Item.Description>
                                 </Item.Content>

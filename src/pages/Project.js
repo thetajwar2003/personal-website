@@ -324,22 +324,22 @@ export default function Project() {
                         </Item.Group>
                     </Modal.Content>
                 ) : (
-                    <Modal.Content image>
-                    <Image size="medium" src='https://picsum.photos/200/300' wrapped style={{ padding: "0%", margin: "0%" }} />
-                    <Container>
-                        <Header>Full Description:</Header>
-                        {selectedProject.Desc}
-                        <Divider hidden/>
-                        <Item.Extra>
-                            {selectedProject.Tags.map(function (tag, index) {
-                                return (
-                                    <Label>{tag}</Label>
-                                )
-                            })}
-                        </Item.Extra>
-                    </Container>
-                </Modal.Content>
-                )}
+                        <Modal.Content image>
+                            <Image size="medium" src='https://picsum.photos/200/300' wrapped style={{ padding: "0%", margin: "0%" }} />
+                            <Container>
+                                <Header>Full Description:</Header>
+                                {selectedProject.Desc}
+                                <Divider hidden />
+                                <Item.Extra>
+                                    {selectedProject.Tags.map(function (tag, index) {
+                                        return (
+                                            <Label>{tag}</Label>
+                                        )
+                                    })}
+                                </Item.Extra>
+                            </Container>
+                        </Modal.Content>
+                    )}
             </Modal>
         </Grid>
     )
