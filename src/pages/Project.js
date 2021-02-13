@@ -26,7 +26,7 @@ export default function Project() {
                         <Grid.Column >
                             <Item.Group >
                                 <Item >
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.postr().Image} rounded/>
                                     <Item.Content>
                                         <Item.Header >{proj.postr().Name}</Item.Header>
                                         <Item.Meta> {proj.postr().Date} </Item.Meta>
@@ -59,7 +59,7 @@ export default function Project() {
                         <Grid.Column>
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.insta().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.insta().Name}</Item.Header>
                                         <Item.Meta> {proj.insta().Date} </Item.Meta>
@@ -93,24 +93,24 @@ export default function Project() {
                         <Grid.Column >
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.agora().Image} />
                                     <Item.Content>
-                                        <Item.Header >{proj.cleverCart().Name}</Item.Header>
-                                        <Item.Meta> {proj.cleverCart().Date} </Item.Meta>
+                                        <Item.Header >{proj.agora().Name}</Item.Header>
+                                        <Item.Meta> {proj.agora().Date} </Item.Meta>
                                         <Item.Description>
-                                            {proj.cleverCart().Meta}
+                                            {proj.agora().Meta}
                                             <Button size="small" style={{
                                                 padding: "0%", color: "#7e7e7e",
                                                 background: "none", border: "none", textDecoration: "underline"
                                             }} onClick={() => {
                                                 setShowModal(true);
-                                                setSelectedProject(proj.cleverCart);
+                                                setSelectedProject(proj.agora);
                                             }}>
                                                 ...more
                                             </Button>
                                         </Item.Description>
                                         <Item.Extra>
-                                            {proj.cleverCart().Tags.map(function (tag, index) {
+                                            {proj.agora().Tags.map(function (tag, index) {
                                                 if (index < 3) {
                                                     return (
                                                         <Label>{tag}</Label>
@@ -125,7 +125,7 @@ export default function Project() {
                         <Grid.Column>
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.flappyBird().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.flappyBird().Name}</Item.Header>
                                         <Item.Meta> {proj.flappyBird().Date} </Item.Meta>
@@ -159,7 +159,7 @@ export default function Project() {
                         <Grid.Column >
                             <Item.Group >
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.atm().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.atm().Name}</Item.Header>
                                         <Item.Meta> {proj.atm().Date} </Item.Meta>
@@ -192,7 +192,7 @@ export default function Project() {
                         <Grid.Column>
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.neuralNets().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.neuralNets().Name}</Item.Header>
                                         <Item.Meta> {proj.neuralNets().Date} </Item.Meta>
@@ -226,7 +226,7 @@ export default function Project() {
                         <Grid.Column >
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.googleAssistant().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.googleAssistant().Name}</Item.Header>
                                         <Item.Meta> {proj.googleAssistant().Date} </Item.Meta>
@@ -258,7 +258,7 @@ export default function Project() {
                         <Grid.Column>
                             <Item.Group>
                                 <Item>
-                                    <Item.Image src='https://picsum.photos/200/' />
+                                    <Item.Image src={proj.otherProjects().Image} />
                                     <Item.Content>
                                         <Item.Header >{proj.otherProjects().Name}</Item.Header>
                                         <Item.Meta> Various Dates </Item.Meta>
@@ -303,7 +303,7 @@ export default function Project() {
                             {selectedProject.Projects.map(function (project, index) {
                                 return (
                                     <Item>
-                                        <Image size="tiny" src={project.Image} wrapped style={{ padding: "0%", margin: "0%" }} />
+                                        <Image size="tiny" src={project.Image} wrapped style={{ padding: "0%", margin: "0%" }} floated="left"/>
                                         <Item.Content>
                                             <Header as="h3">
                                                 {project.Name}
@@ -325,7 +325,7 @@ export default function Project() {
                     </Modal.Content>
                 ) : (
                         <Modal.Content image>
-                            <Image size="medium" src='https://picsum.photos/200/300' wrapped style={{ padding: "0%", margin: "0%" }} />
+                            <Image size="medium" src={selectedProject.Image} wrapped style={{ padding: "0%", margin: "0%" }} floated="left"/>
                             <Container>
                                 <Header>Full Description:</Header>
                                 {selectedProject.Desc}

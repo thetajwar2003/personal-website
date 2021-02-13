@@ -1,11 +1,15 @@
+import agora from '../images/agora.png';
 import atm from '../images/atm.png';
 import attendance from '../images/attendance.png';
+import behavr from '../images/behavr.png';
 import calc from '../images/calc.png';
 import covid from '../images/covid.png';
 import encryption from '../images/encryption.png';
 import flapp from '../images/flapp.png';
 import insta from '../images/insta.png';
 import nn from '../images/nn.png';
+import postr from '../images/postr.png';
+import practical from '../images/practical.png';
 import voiceassistant from '../images/voiceassistant.png';
 
 class detailsOn {
@@ -19,13 +23,13 @@ class detailsOn {
                    number of likes and comments of each post, and who liked and commented on posts. I used GraphQL to query in data from the database and send data back to the database. Each user
                    was given a 1 hour token generated from JWTokens. And I used SemanticUI to make the website as visually pleasing as possible.`,
             Tags: ["MERN Stack", "GrapghQL", "SemanticUI"],
-            Image: 'https://picsum.photos/100/'
+            Image: postr
         }
     };
 
-    cleverCart = () => {
+    agora = () => {
         return {
-            Name: "Clever Cart",
+            Name: "Agora",
             Date: "01/11/2021",
             Meta: "An iOS shopping app that customers can use to buy products and admins can use to supply the products",
             Desc: `I built this iOS shopping app with a friend where customers can add/remove items from their carts. They can proceed to checkout which only empties the cart. Admins can add 
@@ -34,7 +38,7 @@ class detailsOn {
                    or an admin. We show diffent screens to both type of users. Customers will have two tabs, one being a list of items in the store, and another being their cart. Admins will 
                    see a similar list of items in the store tab, where they're able to remove the item, and another tab to add a new product or increase the quantity of an existing item.`,
             Tags: ["Swift", "RestAPI"],
-            Image: 'https://picsum.photos/100/'
+            Image: agora
         }
     };
 
@@ -142,7 +146,7 @@ class detailsOn {
                            and Matplotlib. Finally I created machine learning models to train the data and attempt to predict a user based on their writing style. I was able to achieve 97% accuracy
                            using a SVM model.`,
                     Tags: ["React Native", "Firebase", "Machine Learning", "NLP", "SVM", "Stylometry"],
-                    Image: 'https://picsum.photos/100/'
+                    Image: behavr
                 },
                 {
                     Name: "Encryption",
@@ -153,7 +157,7 @@ class detailsOn {
                     Image: encryption
                 }
             ],
-            Image: 'https://picsum.photos/100/'
+            Image: practical
         }
     };
 
