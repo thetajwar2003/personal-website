@@ -6,20 +6,16 @@ import hkp from '../images/hkp.png';
 
 export default function Experience() {
     return (
-        <Grid style={{ padding: "1% 0% 1% 0%", margin: "0%", width: "100%", background: "#ebebeb" }}>
-            <Container fluid>
+        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%", background: "#ebebeb" }}>
+            <Container>
                 <Header as="h1" textAlign="center">
                     Experience
                 <Divider />
                 </Header>
 
-                <Grid celled='internally' centered columns={2} style={{ padding: "0% 10% 0% 10%", margin: "0%", width: "100%" }}>
+                <Grid celled='internally' centered columns={2} style={{ padding: "0% 10% 0% 10%", margin: "0%", width: "100%" }} fl>
                     <Grid.Row>
                         <Grid.Column centered >
-                            {/* <Header as="h2">
-                                HKP Solutions
-                                <Header.Subheader>3 months</Header.Subheader>
-                            </Header> */}
                             <Card color="blue" fluid>
                                 <Card.Content>
                                     <Image

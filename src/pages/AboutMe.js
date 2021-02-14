@@ -6,7 +6,7 @@ import taj from '../images/tajpic.png';
 
 export default function AboutMe() {
     return (
-        <Grid style={{ padding: "1% 0% 1% 0%", margin: "0%", width: "100%", background: "#ebebeb" }}>
+        <Grid style={{ padding: "5% 0% 1% 0%", margin: "0%", width: "100%", height: '85vh', background: "#ebebeb" }}>
             <Container >
                 <Header as="h1" textAlign='center'>
                     About Me
@@ -23,7 +23,7 @@ export default function AboutMe() {
                             <Header as="h2">Hey, I'm Tajwar!</Header>
                             <p>
                                 I'm a senior at Bronx Science who loves combining programming and math to create creative
-                                real-world applications. I'm attentive to detail, task-oriented and eager to contribute to team
+                                real-world applications. I'm attentive to detail, task-oriented and eager to contribute to the team.
                                 I thrive in environments that allow me to develop my skills on a continuous basis. I'm dedicated
                                 to growing as a developer and as an individual.
                             </p>

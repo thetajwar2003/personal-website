@@ -24,7 +24,7 @@ export default function Contact() {
     }
     // service_qlk090c
     return (
-        <Grid style={{ padding: "1% 0% 10% 0%", margin: "0%", width: "100%", background: "#ebebeb" }}>
+        <Grid style={{ padding: "5% 0% 10% 0%", margin: "0%", width: "100%", height: '85vh', background: "#ebebeb", }}>
             <Container>
                 <Header as="h1" textAlign="center">
                     Let's Get In Touch

@@ -15,7 +15,7 @@ export default function Project() {
     });
     const proj = new detailsOn();
     return (
-        <Grid style={{ padding: "1% 0% 1% 0%", margin: "0%", width: "100%" }}>
+        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%"}}>
             <Container >
                 <Header as="h1" textAlign="center">
                     Projects
