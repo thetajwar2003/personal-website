@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React from 'react'
 import { Menu, Button } from 'semantic-ui-react'
 import { Link } from "react-scroll";
 

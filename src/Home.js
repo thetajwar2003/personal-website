@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Image } from 'semantic-ui-react';
 
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
@@ -21,6 +22,7 @@ export default function Home() {
                 <Experience id="experience"/>
                 <Project id="project"/>
                 <Contact id="contact"/>
+                <Footer />
             </Grid.Column>
         </Grid>
     )
