@@ -62,7 +62,7 @@ export default function Contact(props) {
                         <TextArea name="message" placeholder="Your Message" style={{ minHeight: 100 }} onChange={e => setMessage(e.target.value)} value={message} />
                     </Form.Field>
 
-                    <Button size="small" type="submit" > Send </Button>
+                    <Button size="small" type="submit" style={{ background: "#232323", color: "#ffffff" }}> Send </Button>
 
                     {sentMail ? 
                         (<Message

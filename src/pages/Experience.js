@@ -64,7 +64,7 @@ export default function Experience(props) {
                                     <Card.Header>Slingshot Mentoring</Card.Header>
                                     <Card.Meta>3 months</Card.Meta>
                                     <CardDescription>
-                                        Slingshot Mentoring is a global startup incubator that provides a free mentored internship program, and is focused on providing high school students to
+                                        Slingshot Mentoring is a global startup incubator that provides a free mentored internship program. It's focused on providing high school students an
                                         industry-level internship, access to valuable college prep resources, and a lifelong network with mentors who graduated from the world's most prestigious
                                         CS universities.
                                     </CardDescription>
