@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Grid, Container, Header, Divider, Form, TextArea, Button, Message } from 'semantic-ui-react'
 import emailjs from 'emailjs-com';
+require('dotenv').config();
 
 export default function Contact(props) {
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ export default function Contact(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        emailjs.sendForm('service_qlk090c', 'template_r5q2tvt', e.target, 'user_seAyLCJNIlX5cKn1Fc0Z0')
+        emailjs.sendForm(process.env.REACT_APP_serviceKey, process.env.REACT_APP_templateKey, e.target, process.env.REACT_APP_userId)
         .then((result) => {
             console.log(result.text);
             setSentMail(true);
@@ -22,7 +23,6 @@ export default function Contact(props) {
         setMessage('');
         setName('');
     }
-    // service_qlk090c
     return (
         <Grid style={{ padding: "5% 0% 10% 0%", margin: "0%", width: "100%", height: '81vh', background: "#ebebeb", }} >
             <Container>
