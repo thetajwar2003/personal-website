@@ -4,11 +4,11 @@ import { Grid, Header, Icon, Image, Divider, Container } from 'semantic-ui-react
 
 import taj from '../images/tajpic.png';
 
-export default function AboutMe() {
+export default function AboutMe(props) {
     return (
         <Grid style={{ padding: "5% 0% 1% 0%", margin: "0%", width: "100%", height: '85vh', background: "#ebebeb" }}>
             <Container >
-                <Header as="h1" textAlign='center'>
+                <Header as="h1" textAlign='center' id={props.id}>
                     About Me
                 <Divider />
                 </Header>

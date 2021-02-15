@@ -4,11 +4,11 @@ import { Grid, Container, Header, Divider, Card, Image, Button, Icon, CardDescri
 import slingshot from '../images/slingshot.png';
 import hkp from '../images/hkp.png';
 
-export default function Experience() {
+export default function Experience(props) {
     return (
-        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%", background: "#ebebeb" }}>
+        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%", background: "#ebebeb" }} >
             <Container>
-                <Header as="h1" textAlign="center">
+                <Header as="h1" textAlign="center" id={props.id}>
                     Experience
                 <Divider />
                 </Header>

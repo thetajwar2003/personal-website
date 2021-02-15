@@ -4,7 +4,7 @@ import { Container, Item, Label, Header, Divider, Grid, Button, Modal, Image } f
 
 import detailsOn from '../constants/projectDetails';
 
-export default function Project() {
+export default function Project(props) {
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState({
         Name: "",
@@ -15,9 +15,9 @@ export default function Project() {
     });
     const proj = new detailsOn();
     return (
-        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%"}}>
+        <Grid style={{ padding: "5% 0% 5% 0%", margin: "0%", width: "100%"}} >
             <Container >
-                <Header as="h1" textAlign="center">
+                <Header as="h1" textAlign="center" id={props.id}>
                     Projects
                 <Divider />
                 </Header>

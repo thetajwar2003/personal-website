@@ -1,11 +1,12 @@
 import React from 'react'
 import { Grid, Container, Header, Divider, Item } from 'semantic-ui-react'
 import { FaPython, FaJava, FaReact, FaSwift, FaDatabase, FaCogs } from 'react-icons/fa'
-export default function Skills() {
+
+export default function Skills(props) {
     return (
-        <Grid style={{ padding: "5% 0% 1% 0%", margin: "0%", width: "100%", height: '85vh' }}>
+        <Grid style={{ padding: "5% 0% 1% 0%", margin: "0%", width: "100%", height: '85vh' }} >
             <Container>
-                <Header as="h1" textAlign="center">
+                <Header as="h1" textAlign="center" id={props.id}>
                     Skills
                 <Divider />
                 </Header>

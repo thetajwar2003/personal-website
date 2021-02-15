@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Grid, Container, Header, Divider, Form, TextArea, Button, Message } from 'semantic-ui-react'
 import emailjs from 'emailjs-com';
 
-export default function Contact() {
+export default function Contact(props) {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
@@ -24,9 +24,9 @@ export default function Contact() {
     }
     // service_qlk090c
     return (
-        <Grid style={{ padding: "5% 0% 10% 0%", margin: "0%", width: "100%", height: '85vh', background: "#ebebeb", }}>
+        <Grid style={{ padding: "5% 0% 10% 0%", margin: "0%", width: "100%", height: '100vh', background: "#ebebeb", }} >
             <Container>
-                <Header as="h1" textAlign="center">
+                <Header as="h1" textAlign="center" id={props.id}>
                     Let's Get In Touch
                     <Divider />
                     <Header.Subheader>Drop me an e-mail at
