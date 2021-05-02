@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react'
-import { Grid, Container, Icon, Button } from 'semantic-ui-react'
+import React from 'react';
+import { Grid, Container, Icon, Button } from 'semantic-ui-react';
+
+import { social } from '../constants/resumeData.json';
 
 export default function Footer() {
     return (
@@ -9,17 +11,17 @@ export default function Footer() {
                 <Grid centered columns='equal' style={{ padding: "0% 5% 0% 5%", margin: "0%", width: "100%" }} verticalAlign="middle">
                     <Grid.Row>
                         <Grid.Column verticalAlign="middle" textAlign="right">
-                            <Button as="a" href="https://www.linkedin.com/in/tajwar-rahman-aa30851a3/" target="_blank" color="linkedin" >
+                            <Button as="a" href={social.linkedin} target="_blank" color="linkedin" >
                                 <Icon name="linkedin" /> Linkedin
                             </Button>
                         </Grid.Column>
                         <Grid.Column verticalAlign="middle" textAlign="center">
-                            <Button as="a" href="https://github.com/thetajwar2003" target="_blank" style={{ color: "#602693" }} >
+                            <Button as="a" href={social.github} target="_blank" style={{ color: "#602693" }} >
                                 <Icon name="github" /> Github
                             </Button>
                         </Grid.Column>
                         <Grid.Column verticalAlign="middle" textAlign="left">
-                            <Button as="a" href="mailto:rahmantajwar131@gmail.com" target="_blank" color="google plus" >
+                            <Button as="a" href={`mailto:${ social.email }`} target="_blank" color="google plus" >
                                 <Icon name="mail" /> Gmail
                             </Button>
                         </Grid.Column>
@@ -32,5 +34,5 @@ export default function Footer() {
                 </Grid>
             </Container>
         </Grid>
-    )
+    );
 }

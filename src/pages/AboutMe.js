@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react'
-import { Grid, Header, Icon, Image, Divider, Container } from 'semantic-ui-react'
+import React from 'react';
+import { Grid, Header, Icon, Image, Divider, Container } from 'semantic-ui-react';
+
+import { bio, social } from "../constants/resumeData.json";
 
 import taj from '../images/tajpic.png';
 
@@ -22,29 +24,23 @@ export default function AboutMe(props) {
                         <Grid.Column width={12}>
                             <Header as="h2">Hey, I'm Tajwar!</Header>
                             <p>
-                                I'm a senior at Bronx Science who loves combining programming and math to create creative
-                                real-world applications. I'm attentive to detail, task-oriented and eager to contribute to the team.
-                                I thrive in environments that allow me to develop my skills on a continuous basis. I'm dedicated
-                                to growing as a developer and as an individual.
+                                {bio.description}
                             </p>
                             <p>
-                                During my free time I love to either visit the park and play basketball or help cook delicious
-                                meals. I'm also constantly trying to improve the Machine Learning Club in my school by creating
-                                lesson plans and bringing in guest speakers. Prior to the pademic I would often volunteer in any
-                                events that the Key Club provided every weekend.
+                                {bio.coding}
                             </p>
                             <p>
-                                You can reach out to me through email or just message me on Linkedin!
+                                {bio.contact}
                             </p>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <a href="https://www.linkedin.com/in/tajwar-rahman-aa30851a3/" target="_blank">
+                                    <a href={social.linkedin} target="_blank">
                                         <Icon name="linkedin" size="large" />
                                     </a>
-                                    <a href="https://github.com/thetajwar2003" target="_blank">
+                                    <a href={social.github} target="_blank">
                                         <Icon name="github square" size="large" />
                                     </a>
-                                    <a href="mailto:rahmantajwar131@gmail.com" target="_blank">
+                                    <a href={`mailto:${ social.email }`} target="_blank">
                                         <Icon name="mail" size="large" />
                                     </a>
                                 </Grid.Column>
@@ -55,5 +51,5 @@ export default function AboutMe(props) {
                 </Grid>
             </Container>
         </Grid>
-    )
+    );
 }
